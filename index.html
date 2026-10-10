@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>越7 传播 × 费用看板</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f7;color:#1d1d1f;padding:20px 14px 40px;}
+.wrap{max-width:1060px;margin:0 auto}
+h1{font-size:22px;font-weight:700}
+.sub{color:#86868b;font-size:12px;margin-top:4px}
+.tag{display:inline-block;background:#e8e8ed;border-radius:6px;padding:1px 7px;font-size:11px;color:#3a3a3c;margin-right:6px}
+.grid{display:grid;gap:12px;margin-top:12px}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.card{background:#fff;border-radius:18px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.kpi .lab{font-size:12px;color:#86868b}
+.kpi .val{font-size:26px;font-weight:700;margin:2px 0}
+.kpi .delta{font-size:12px;color:#34c759}
+.kpi.red .val{color:#ff3b30}.kpi.red .lab{color:#ff3b30}
+.sec{background:#fff;border-radius:18px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);margin-top:12px}
+.sec h2{font-size:15px;font-weight:700;margin-bottom:10px}
+.sec .note{font-size:11px;color:#86868b;margin-top:8px;line-height:1.6}
+.alert{border-radius:12px;padding:9px 12px;font-size:13px;margin:6px 0;line-height:1.55}
+.alert.red{background:#fff1f0;border:1px solid #ffd2cf;color:#8f1d16}
+.alert.yellow{background:#fff8e6;border:1px solid #ffe9a8;color:#6b5410}
+.bar-row{font-size:12px;margin:9px 0 3px;display:flex;justify-content:space-between}
+.bar{height:10px;background:#eef3fb;border-radius:5px;overflow:hidden}
+.bar>i{display:block;height:10px;background:#0071e3;border-radius:5px}
+.bar.redbar>i{background:#ff3b30}.bar.redbar{background:#ffe9e8}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;color:#86868b;font-weight:500;padding:5px 6px;border-bottom:1px solid #eee}
+td{padding:6px;border-bottom:1px solid #f5f5f7}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.legend{font-size:12px;line-height:2}
+.hbar{display:flex;align-items:center;gap:8px;font-size:12px;margin:7px 0}
+.hbar .nm{width:86px;flex:none;color:#3a3a3c}
+.hbar .tr{flex:1;height:12px;background:#eef3fb;border-radius:6px;overflow:hidden}
+.hbar .tr>i{display:block;height:12px;background:#0071e3;border-radius:6px}
+.hbar .vl{width:86px;flex:none;text-align:right;color:#86868b}
+.foot{font-size:11px;color:#86868b;line-height:1.8;margin-top:14px}
+</style></head>
+<body><div class="wrap">
+<h1>越7 传播 × 费用看板</h1>
+<div class="sub"><span class="tag">传播：越7 PCT工作日报（腾讯文档） · 截至 2026-10-09</span><span class="tag">费用：市场新媒体部预算台账 20261009.xlsx（车型中心明细表1009 等） · 截至 2026-10-09</span><span class="tag">阶段 9.22–10.31</span></div>
+
+<div class="grid kpis">
+<div class="card kpi"><div class="lab">累计曝光</div><div class="val">32.9943亿</div><div class="delta">当日 +1,087万</div></div>
+<div class="card kpi"><div class="lab">累计阅读</div><div class="val">15.1561亿</div><div class="delta">当日 +561万</div></div>
+<div class="card kpi"><div class="lab">累计互动</div><div class="val">1,591.9413万</div><div class="delta">当日 +4,813</div></div>
+<div class="card kpi"><div class="lab">全年预算执行率</div><div class="val">101.4%</div><div class="delta" style="color:#ff3b30">超支 1,297万</div></div>
+<div class="card kpi red"><div class="lab">越7 预算执行率</div><div class="val">145.7%</div><div class="delta" style="color:#ff3b30">超支 8,629万</div></div>
+</div>
+
+<div class="sec"><h2>预警 · 问题清单（自动生成）</h2><div class="alert red">大定完成率仅 37%（1,940 / 5,176），缺口 3,236 台，与线索完成率 95% 严重背离</div><div class="alert red">越7 全年预算执行 145.7%，超支 8,629 万，为全盘唯一巨额超支</div><div class="alert red">E8 预算余量仅 44.6 万（执行率 99.4%），Q4 还有 HEV 上市动作</div><div class="alert yellow">越7 Q4 规划两版口径差 977 万（1,691.58 万 vs 2,668.35 万），10-12 上会前须定版</div><div class="alert yellow">「全年使用」三口径不一致：9.495 亿（明细表）/ 9.525 亿（汇报版）/ 9.548 亿（汇总折算）</div><div class="alert yellow">纪要指摘的旅游平台 90 万在预算台账中无对应条目；GEO 无独立预算（仅在品牌公关通用打包项 153.5 万内）</div><div class="alert yellow">Sheet1 标注越7 公关传播「缺口 900 万」，仅有 10 万规划金额</div></div>
+
+<div class="two">
+<div class="sec"><h2>传播趋势 · 每日新增曝光</h2><div class="hbar"><span class="nm">10-09</span><span class="tr"><i style="width:100%"></i></span><span class="vl">曝光 +1,087万</span></div>
+<div class="note">数据源：PCT 日报「市场新媒体附表」，长期任务每日追加；当前已积累 1 天。</div></div>
+<div class="sec"><h2>目标达成 · 阶段 9.22–10.31</h2>
+<div class="bar-row"><span>线索完成率</span><span><b>95%</b></span></div><div class="bar"><i style="width:95%"></i></div>
+<div class="bar-row"><span>大定完成率</span><span><b style="color:#ff3b30">37%</b></span></div><div class="bar redbar"><i style="width:37%"></i></div>
+<table style="margin-top:10px"><tr><th>日期</th><th class="num">曝光新增</th><th class="num">阅读新增</th><th class="num">互动新增</th></tr><tr><td>2026-10-09</td><td class="num">约1,087万</td><td class="num">约561万</td><td class="num">4,813</td></tr></table>
+<div class="note">上半为阶段总目标进度，下半为每日对照；每日目标取自日报「漏斗目标(9.22-10.31)」表，抓取后自动补入。</div></div>
+</div>
+
+<div class="sec"><h2>转化漏斗 · 10月阶段（全国）</h2><div class="bar-row"><span>线索</span><span>62,265 · 目标 65,673 · 完成率 95%</span></div><div class="bar"><i style="width:100%"></i></div><div class="bar-row"><span>到店</span><span>15,906 · 到店率 25.5%</span></div><div class="bar"><i style="width:26%"></i></div><div class="bar-row"><span>试驾</span><span>5,793 · 试驾率 36%</span></div><div class="bar"><i style="width:9%"></i></div><div class="bar-row"><span>大定</span><span>1,940 · 目标 5,176 · 完成率 37%</span></div><div class="bar redbar"><i style="width:3%"></i></div><div class="bar-row"><span>订单转化</span><span>1,915 · 大定转化 98.7%</span></div><div class="bar"><i style="width:3%"></i></div><div class="note">剩余有效预售订单 894 · 剩余有效盲订订单 1,443</div>
+<div class="note">来源：日报「越7阶段日报（9.22起）」阶段汇总行，截至 2026-10-09。</div></div>
+
+<div class="two">
+<div class="sec"><h2>费用结构 · 分车型使用占比</h2>
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><svg width="180" height="180" viewBox="0 0 180 180"><circle r="70" cx="90" cy="90" fill="none" stroke="#0071e3" stroke-width="26" stroke-dasharray="192.4 247.5" stroke-dashoffset="25.0" transform="rotate(-90 90 90)"/><circle r="70" cx="90" cy="90" fill="none" stroke="#64d2ff" stroke-width="26" stroke-dasharray="127.5 312.3" stroke-dashoffset="-167.4" transform="rotate(-90 90 90)"/><circle r="70" cx="90" cy="90" fill="none" stroke="#30d158" stroke-width="26" stroke-dasharray="36.3 403.5" stroke-dashoffset="-294.8" transform="rotate(-90 90 90)"/><circle r="70" cx="90" cy="90" fill="none" stroke="#ffd60a" stroke-width="26" stroke-dasharray="31.7 408.1" stroke-dashoffset="-331.1" transform="rotate(-90 90 90)"/><circle r="70" cx="90" cy="90" fill="none" stroke="#af52de" stroke-width="26" stroke-dasharray="20.7 419.1" stroke-dashoffset="-362.9" transform="rotate(-90 90 90)"/><circle r="70" cx="90" cy="90" fill="none" stroke="#d1d1d6" stroke-width="26" stroke-dasharray="31.2 408.6" stroke-dashoffset="-383.6" transform="rotate(-90 90 90)"/><text x="90" y="84" text-anchor="middle" font-size="12" fill="#86868b">总使用</text><text x="90" y="106" text-anchor="middle" font-size="17" font-weight="700" fill="#1d1d1f">9.50亿</text></svg><div class="legend"><div><span style="color:#0071e3">■</span> 通用（全车型） 43.7%</div><div><span style="color:#64d2ff">■</span> 越7 29.0%</div><div><span style="color:#30d158">■</span> M8全车系 8.3%</div><div><span style="color:#ffd60a">■</span> E8全车系 7.2%</div><div><span style="color:#af52de">■</span> S7 4.7%</div><div><span style="color:#d1d1d6">■</span> 其他 7.1%</div></div></div>
+<div class="note">分中心加总 955,876,635 与总使用 949,523,813 差 6,352,822（台账口径问题，见口径区）。</div></div>
+<div class="sec"><h2>费用结构 · 分中心使用</h2><div class="hbar"><span class="nm">新媒体运营</span><span class="tr"><i style="width:100%"></i></span><span class="vl">5.38亿</span></div><div class="hbar"><span class="nm">品牌公关</span><span class="tr"><i style="width:29%"></i></span><span class="vl">1.55亿</span></div><div class="hbar"><span class="nm">区域营销支持</span><span class="tr"><i style="width:25%"></i></span><span class="vl">1.36亿</span></div><div class="hbar"><span class="nm">社会化媒体</span><span class="tr"><i style="width:21%"></i></span><span class="vl">1.11亿</span></div><div class="hbar"><span class="nm">车型营销</span><span class="tr"><i style="width:3%"></i></span><span class="vl">0.15亿</span></div>
+<div class="note">来源：台账车型中心明细表1009，截至 2026-10-09。</div></div>
+</div>
+
+<div class="sec"><h2>费用结构 · 各车型预算执行（按执行率排序，超支标红）</h2><div class="bar-row"><span>越7 · 超支</span><span>2.75亿 / 1.89亿 · <b style="color:#ff3b30">145.7%</b></span></div><div class="bar redbar"><i style="width:100%"></i></div><div class="bar-row"><span>S7 · 超支</span><span>0.45亿 / 0.44亿 · <b style="color:#ff3b30">101.3%</b></span></div><div class="bar redbar"><i style="width:100%"></i></div><div class="bar-row"><span>GS4 MAX</span><span>0.00亿 / 0.00亿 · <b style="color:#1d1d1f">100.0%</b></span></div><div class="bar"><i style="width:100%"></i></div><div class="bar-row"><span>E8全车系</span><span>0.69亿 / 0.69亿 · <b style="color:#1d1d1f">99.4%</b></span></div><div class="bar"><i style="width:99%"></i></div><div class="bar-row"><span>第五代GS4</span><span>0.36亿 / 0.38亿 · <b style="color:#1d1d1f">94.6%</b></span></div><div class="bar"><i style="width:95%"></i></div><div class="bar-row"><span>M8全车系</span><span>0.78亿 / 0.86亿 · <b style="color:#1d1d1f">90.8%</b></span></div><div class="bar"><i style="width:91%"></i></div><div class="bar-row"><span>GS8</span><span>0.15亿 / 0.17亿 · <b style="color:#1d1d1f">88.9%</b></span></div><div class="bar"><i style="width:89%"></i></div><div class="bar-row"><span>通用（全车型）</span><span>4.15亿 / 4.72亿 · <b style="color:#1d1d1f">88.0%</b></span></div><div class="bar"><i style="width:88%"></i></div><div class="bar-row"><span>影速</span><span>0.02亿 / 0.03亿 · <b style="color:#1d1d1f">85.7%</b></span></div><div class="bar"><i style="width:86%"></i></div><div class="bar-row"><span>V20</span><span>0.02亿 / 0.02亿 · <b style="color:#1d1d1f">83.9%</b></span></div><div class="bar"><i style="width:84%"></i></div><div class="bar-row"><span>M6</span><span>0.09亿 / 0.12亿 · <b style="color:#1d1d1f">77.1%</b></span></div><div class="bar"><i style="width:77%"></i></div><div class="bar-row"><span>影豹</span><span>0.00亿 / 0.01亿 · <b style="color:#1d1d1f">75.2%</b></span></div><div class="bar"><i style="width:75%"></i></div><div class="bar-row"><span>S9</span><span>0.02亿 / 0.03亿 · <b style="color:#1d1d1f">64.0%</b></span></div><div class="bar"><i style="width:64%"></i></div></div>
+
+<div class="two">
+<div class="sec"><h2>费用动态 · 预算调出流水（合计 2,826万，17 笔已审核汇总）</h2>
+<table><tr><th>调入方</th><th class="num">金额</th><th>构成/事由</th></tr><tr><td>传祺BU－零售运营部</td><td class="num">1,935万</td><td>V22下沉推广 1070万、T75下沉推广 332万、MCN及官方线索 360万、企业文化 77.7万、广州品牌声量 60万、校友体育联盟 35万</td></tr><tr><td>传祺BU－战略发展部</td><td class="num">263万</td><td>集团预算管理安排 143万、品牌健康度调研 120万</td></tr><tr><td>水平事业中心</td><td class="num">228万</td><td>2026款M8 2.0T上市后销量不达预期</td></tr><tr><td>军人专项</td><td class="num">220万</td><td>圈层创新营销（军人军属）</td></tr><tr><td>传祺BU－用户发展部</td><td class="num">180万</td><td>祺野探险官运营 50万、小祺IP设计优化 130万</td></tr></table></div>
+<div class="sec"><h2>费用动态 · 月度费用申请节奏</h2><div class="hbar"><span class="nm">4月</span><span class="tr"><i style="width:1%"></i></span><span class="vl">118万</span></div><div class="hbar"><span class="nm">5月</span><span class="tr"><i style="width:12%"></i></span><span class="vl">976万</span></div><div class="hbar"><span class="nm">6月</span><span class="tr"><i style="width:10%"></i></span><span class="vl">794万</span></div><div class="hbar"><span class="nm">7月</span><span class="tr"><i style="width:51%"></i></span><span class="vl">4,222万</span></div><div class="hbar"><span class="nm">8月</span><span class="tr"><i style="width:100%"></i></span><span class="vl">8,334万</span></div><div class="hbar"><span class="nm">9月</span><span class="tr"><i style="width:62%"></i></span><span class="vl">5,204万</span></div><div class="hbar"><span class="nm">10月</span><span class="tr"><i style="width:7%"></i></span><span class="vl">600万</span></div>
+<div class="note">费用类全过程报表口径（单据窗口切片），非全年费用发生额。</div></div>
+</div>
+
+<div class="sec"><h2>费用动态 · Q4 规划两版口径对照（全盘 Q4 规划 0916 版合计 1.36亿）</h2>
+<table><tr><th>车型</th><th class="num">0916 汇报版</th><th class="num">后期立项清单</th><th class="num">差额</th><th>说明</th></tr><tr><td>越7</td><td class="num">1,692万</td><td class="num">2,668万</td><td class="num" style="color:#ff3b30">+977万</td><td>后期立项清单：社会化 600万→900万，新增新媒体IP专项投放 983.57万</td></tr><tr><td>第五代GS4</td><td class="num">151万</td><td class="num">251万</td><td class="num" style="color:#ff3b30">+100万</td><td>立项清单另含社会化「GS4四季度专项传播」100万，未进0916汇报版</td></tr></table>
+<div class="note">两版并存即风险：上会引用 Q4 数字前必须先定版。</div></div>
+
+<div class="sec"><h2>口径与来源 · 对不上账清单</h2><div>· 全年使用三口径：明细表1009 为 949,523,813；汇报版（截止9-16）实绩发生 952,488,950；汇总表实绩+规划折算 954,784,500。</div><div>· 明细表分中心使用加总与各车型总使用对不上：通用 +10,552,310、越7 −8,387,965、E8 +2,119,709、S7 +1,328,073、M8 +340,695、第五代GS4 +400,000；小车型为 0。</div><div>· 立项超预算（汇报版 9-16）：社会化中心已立项超预算 31,887,623；新媒体运营中心超 81,612,799。</div><div>· 越7&amp;小红书品鉴会同名立项两条并存（社会化约 234 万、新媒体约 700 万），需分工口径。</div><div>· 凯乐石合作营销：全过程报表 6,699,833（品牌中心）vs 汇报版 6,268,734（区域中心），金额与归属均不一致。</div>
+<div class="foot">传播数据每日由长期任务从 PCT 日报链接抓取更新；费用数据随新台账更新。缺失数据标「暂无」，不估算填充。本页生成于 2026-10-10。</div></div>
+
+</div></body></html>
