@@ -1,67 +1,70 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>越7 传播页 · 详细拆解</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f7;color:#1d1d1f;padding:20px 14px 40px}
-.wrap{max-width:1060px;margin:0 auto}
-h1{font-size:22px;font-weight:700}
-.sub{color:#86868b;font-size:12px;margin-top:4px}
-.tag{display:inline-block;background:#e8e8ed;border-radius:6px;padding:1px 7px;font-size:11px;color:#3a3a3c;margin-right:6px}
-.nav{margin:14px 0 2px}
-.nav a{display:inline-block;text-decoration:none;background:#fff;color:#0071e3;border:1px solid #d9e6f7;border-radius:999px;padding:6px 16px;font-size:13px;margin-right:8px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#eef1f6;color:#1d1d1f;padding:26px 16px 46px;position:relative;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(600px 380px at 12% 0%,rgba(0,113,227,.20),transparent 60%),radial-gradient(700px 420px at 88% 12%,rgba(175,82,222,.16),transparent 60%),radial-gradient(800px 500px at 50% 100%,rgba(52,199,89,.12),transparent 60%);z-index:-1}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:26px;font-weight:800;letter-spacing:-.4px}
+h1 em{font-style:normal;background:linear-gradient(90deg,#0071e3,#af52de);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#6e6e73;font-size:12px;margin-top:9px}
+.tag{display:inline-block;background:rgba(255,255,255,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:3px 11px;font-size:11.5px;color:#3a3a3c;margin-right:7px}
+.nav{margin:16px 0 4px}
+.nav a{display:inline-block;text-decoration:none;background:rgba(255,255,255,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#0071e3;border:1px solid rgba(255,255,255,.75);border-radius:999px;padding:7px 17px;font-size:13px;margin-right:8px;box-shadow:0 4px 14px rgba(30,40,80,.07)}
 .nav a.on{background:#0071e3;color:#fff;border-color:#0071e3}
-.grid{display:grid;gap:12px;margin-top:12px}
-.kpis{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-.card{background:#fff;border-radius:18px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-.kpi .lab{font-size:12px;color:#86868b}
-.kpi .val{font-size:24px;font-weight:700;margin:2px 0;white-space:nowrap}
-.kpi .lab{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-table{display:block;overflow-x:auto}
+.grid{display:grid;gap:14px;margin-top:14px}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(198px,1fr))}
+.card{background:rgba(255,255,255,.66);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:1px solid rgba(255,255,255,.75);border-radius:20px;padding:17px 19px;box-shadow:0 8px 26px rgba(30,40,80,.08)}
+.kpi .lab{font-size:12px;color:#86868b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .val{font-size:29px;font-weight:800;letter-spacing:-.8px;margin:4px 0 3px;white-space:nowrap}
+.valrow{display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.kpi .delta{font-size:12px;color:#1d9e50;line-height:1.5}
+.kpi .warn{font-size:12px;color:#ff3b30;line-height:1.5}
+.kpi.red .val{color:#ff3b30}.kpi.red .lab{color:#ff3b30}
+.sec{background:rgba(255,255,255,.66);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:1px solid rgba(255,255,255,.75);border-radius:22px;padding:21px 23px;box-shadow:0 10px 34px rgba(30,40,80,.09);margin-top:16px}
+.sec h2{font-size:16.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:9px}
+.sec h2::before{content:"";width:4px;height:17px;border-radius:2px;background:linear-gradient(180deg,#0071e3,#af52de);flex:none}
+.sec .note{font-size:11.5px;color:#86868b;margin-top:9px;line-height:1.65}
+.alert{border-radius:14px;padding:11px 14px;font-size:13px;margin:7px 0;line-height:1.6;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.alert.red{background:rgba(255,59,48,.08);border:1px solid rgba(255,59,48,.22);color:#8f1d16}
+.alert.yellow{background:rgba(255,190,0,.10);border:1px solid rgba(255,190,0,.30);color:#6b5410}
+table{display:block;overflow-x:auto;width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:#86868b;font-weight:600;padding:7px 8px;border-bottom:1px solid rgba(0,0,0,.08);white-space:nowrap;font-size:12.5px}
+td{padding:8px;border-bottom:1px solid rgba(0,0,0,.05)}
 table th,table td.num{white-space:nowrap}
-.legend{display:flex;gap:14px;flex-wrap:wrap;margin:6px 2px 2px;font-size:12px;color:#6e6e73}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+tr.self td{background:rgba(0,113,227,.07);font-weight:600}
+.best{color:#0071e3;font-weight:700}
+.bar-row{font-size:12.5px;margin:10px 0 4px;display:flex;justify-content:space-between}
+.bar{height:10px;background:rgba(0,60,140,.07);border-radius:5px;overflow:hidden}
+.bar>i{display:block;height:10px;background:linear-gradient(90deg,#0071e3,#5eb2ff);border-radius:5px}
+.bar.redbar>i{background:linear-gradient(90deg,#ff3b30,#ff7a70)}.bar.redbar{background:rgba(255,59,48,.10)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two>.sec{margin-top:16px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:7px 2px 2px;font-size:12px;color:#6e6e73;line-height:1.9}
 .legend .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.hbar{display:flex;align-items:center;gap:8px;font-size:12.5px;margin:8px 0}
+.hbar .nm{width:86px;flex:none;color:#3a3a3c}
+.hbar .tr{flex:1;height:12px;background:rgba(0,60,140,.07);border-radius:6px;overflow:hidden}
+.hbar .tr>i{display:block;height:12px;background:linear-gradient(90deg,#0071e3,#5eb2ff);border-radius:6px}
+.hbar .vl{width:110px;flex:none;text-align:right;color:#86868b}
+.rank{font-size:20px;font-weight:700}
 .chart-wrap{position:relative}
 .guide{position:absolute;top:0;bottom:0;width:1px;background:#0071e3;opacity:.45;display:none;pointer-events:none}
 .hdots{position:absolute;inset:0;pointer-events:none}
 .hdot{position:absolute;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}
-.tip{position:absolute;display:none;background:rgba(255,255,255,.97);border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.13);padding:8px 11px;font-size:12px;pointer-events:none;z-index:5;min-width:132px}
+.tip{position:absolute;display:none;background:rgba(255,255,255,.96);border:1px solid rgba(0,0,0,.07);border-radius:12px;box-shadow:0 8px 24px rgba(30,40,80,.16);padding:8px 11px;font-size:12px;pointer-events:none;z-index:5;min-width:132px;backdrop-filter:blur(8px)}
 .tip .td{font-weight:700;margin-bottom:4px;color:#1d1d1f}
 .tip .tr{display:flex;justify-content:space-between;gap:14px;line-height:1.75;color:#3a3a3c}
 .tip .tr b{font-weight:700;color:#1d1d1f}
-.kpi .delta{font-size:12px;color:#34c759}
-.kpi .warn{font-size:12px;color:#ff3b30}
-.kpi.red .val{color:#ff3b30}.kpi.red .lab{color:#ff3b30}
-.sec{background:#fff;border-radius:18px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);margin-top:12px}
-.sec h2{font-size:15px;font-weight:700;margin-bottom:10px}
-.sec .note{font-size:11px;color:#86868b;margin-top:8px;line-height:1.6}
-.alert{border-radius:12px;padding:9px 12px;font-size:13px;margin:6px 0;line-height:1.55}
-.alert.red{background:#fff1f0;border:1px solid #ffd2cf;color:#8f1d16}
-.alert.yellow{background:#fff8e6;border:1px solid #ffe9a8;color:#6b5410}
-.bar-row{font-size:12px;margin:9px 0 3px;display:flex;justify-content:space-between}
-.bar{height:10px;background:#eef3fb;border-radius:5px;overflow:hidden}
-.bar>i{display:block;height:10px;background:#0071e3;border-radius:5px}
-.bar.redbar>i{background:#ff3b30}.bar.redbar{background:#ffe9e8}
-table{width:100%;border-collapse:collapse;font-size:12.5px}
-th{text-align:left;color:#86868b;font-weight:500;padding:5px 6px;border-bottom:1px solid #eee}
-td{padding:6px;border-bottom:1px solid #f5f5f7}
-.num{text-align:right;font-variant-numeric:tabular-nums}
-tr.self td{background:#eef5ff;font-weight:600}
-.best{color:#0071e3;font-weight:700}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:760px){.two{grid-template-columns:1fr}}
-.legend{font-size:12px;line-height:2}
-.hbar{display:flex;align-items:center;gap:8px;font-size:12px;margin:7px 0}
-.hbar .nm{width:86px;flex:none;color:#3a3a3c}
-.hbar .tr{flex:1;height:12px;background:#eef3fb;border-radius:6px;overflow:hidden}
-.hbar .tr>i{display:block;height:12px;background:#0071e3;border-radius:6px}
-.hbar .vl{width:110px;flex:none;text-align:right;color:#86868b}
-.rank{font-size:20px;font-weight:700}
-.foot{font-size:11px;color:#86868b;line-height:1.8;margin-top:14px}
-</style></head><body><div class="wrap"><h1>越7 传播页 · 详细拆解</h1><div class="sub"><span class="tag">传播：越7 PCT工作日报（腾讯文档） · 截至 2026-10-09</span><span class="tag">费用：市场新媒体部预算台账 20261009.xlsx（车型中心明细表1009 等） · 截至 2026-10-09</span><span class="tag">阶段 9.22–10.31</span></div><div class="nav"><a href="dashboard.html" class="">总览</a><a href="comms.html" class="on">传播页</a><a href="ops.html" class="">运营页</a><a href="budget.html" class="">费用页</a></div>
+.foot{font-size:11.5px;color:#86868b;line-height:1.8;margin-top:16px;text-align:center}
+.btn{display:inline-block;text-decoration:none;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);color:#0071e3;border:1px solid rgba(255,255,255,.8);border-radius:999px;padding:6px 15px;font-size:12.5px;box-shadow:0 4px 14px rgba(30,40,80,.07);margin:2px 4px 2px 0}
+</style></head><body><div class="wrap"><h1>越7 传播页 <em> · 详细拆解</em></h1><div class="sub"><span class="tag">传播：越7 PCT工作日报（腾讯文档） · 截至 2026-10-09</span><span class="tag">费用：市场新媒体部预算台账 20261009.xlsx（车型中心明细表1009 等） · 截至 2026-10-09</span><span class="tag">阶段 9.22–10.31</span></div><div class="nav"><a href="dashboard.html" class="">总览</a><a href="comms.html" class="on">传播页</a><a href="ops.html" class="">运营页</a><a href="budget.html" class="">费用页</a></div>
 <div class="grid kpis">
-<div class="card kpi"><div class="lab">声量（10-10）</div><div class="val">10,659</div><div class="warn">较前日 -5.9% · 竞品最高为本车</div></div>
+<div class="card kpi"><div class="lab">声量（10-10）</div><div class="valrow"><div class="val">10,659</div><svg viewBox="0 0 104 30" preserveAspectRatio="none" style="width:104px;height:30px;flex:none"><polyline points="0,11 8,21 16,18 24,7 32,3 40,24 48,23 56,26 64,26 72,16 80,27 88,24 96,26 104,26" fill="none" stroke="#0071e3" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></div><div class="warn">较前日 -5.9% · 竞品最高为本车</div></div>
 <div class="card kpi red"><div class="lab">抖音指数（10-08）</div><div class="val">2.7万</div><div class="warn">钛7 39.5万 · H10 21万</div></div>
 <div class="card kpi"><div class="lab">微信指数（10-08）</div><div class="val">352万</div><div class="delta" style="color:#86868b">H10 795万 · 钛7 571万</div></div>
 <div class="card kpi"><div class="lab">小红书搜索量（10-07）</div><div class="val">1.3万</div><div class="delta" style="color:#86868b">仅次于 H10（2万）</div></div>
-<div class="card kpi"><div class="lab">A3 人群（10-08）</div><div class="val">6,704万</div><div class="warn">较峰值 7,231万（10/1）回落 527万</div></div>
+<div class="card kpi"><div class="lab">A3 人群（10-08）</div><div class="valrow"><div class="val">6,704万</div><svg viewBox="0 0 104 30" preserveAspectRatio="none" style="width:104px;height:30px;flex:none"><polyline points="0,27 8,22 16,16 24,11 32,9 40,7 48,3 56,17 64,16 72,14 80,15 88,17 96,19 104,21" fill="none" stroke="#ff3b30" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></div><div class="warn">较峰值 7,231万（10/1）回落 527万</div></div>
 <div class="card kpi"><div class="lab">垂媒排名 · 中大型SUV（10-08）</div><div class="val" style="font-size:20px">懂5 · 家1 · 易32</div><div class="delta" style="color:#86868b">汽车之家第1 · 易车第32 差距大</div></div>
 </div>
 
